@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	int tmp;
 	char elem;
 	char *str;
+	int pp;
+	unsigned int j;
 
 	va_list ptest;
 
@@ -38,6 +40,17 @@ int _printf(const char *format, ...)
 				_printf("%/%");
 				write(1, &tmp, 1);
 			}
+			else if (pp == va_arg(ptest, int)
+			{
+				_printf("%d\n");
+				write(1, &pp, 1);
+				}
+				else
+				{
+				_printf("%i\n");
+				write(1, &j, 1);
+				}
+
 		}
 
 	va_end(ptest);
